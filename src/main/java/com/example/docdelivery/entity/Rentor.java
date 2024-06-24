@@ -8,7 +8,7 @@ import lombok.Setter;
 @Setter
 @Entity
 @Table(name = "rentor")
-public class Rentors {
+public class Rentor {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,4 +18,6 @@ public class Rentors {
     @Column(name = "name")
     private String name;
 
+    @Column(name = "is_ready")
+    private boolean isReady;
 }
