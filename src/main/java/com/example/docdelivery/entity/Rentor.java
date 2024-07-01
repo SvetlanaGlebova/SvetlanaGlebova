@@ -4,10 +4,12 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.Set;
+
 @Getter
 @Setter
 @Entity
-@Table(name = "rentor")
+@Table(name = "rentors")
 public class Rentor {
 
     @Id
@@ -20,4 +22,11 @@ public class Rentor {
 
     @Column(name = "is_ready")
     private boolean isReady;
+
+    @Column(name = "address")
+    private String address;
+
+    @ManyToMany
+    @JoinTable(name = "rentors_tenants")
+    private Set<Tenant> tenants;
 }
