@@ -20,7 +20,7 @@ public class Tenant {
     @Column(name = "name")
     private String name;
 
-    @ManyToMany(mappedBy = "tenants")
+    @OneToMany
     private Set<Rentor> rentors;
 }
 

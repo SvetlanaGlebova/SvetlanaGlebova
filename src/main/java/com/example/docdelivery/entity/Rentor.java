@@ -26,7 +26,10 @@ public class Rentor {
     @Column(name = "address")
     private String address;
 
-    @ManyToMany
-    @JoinTable(name = "rentors_tenants")
-    private Set<Tenant> tenants;
+    @ManyToOne
+    Tenant tenant;
+
+    public Rentor() {               /// todo ap remove
+        isReady = true;
+    }
 }

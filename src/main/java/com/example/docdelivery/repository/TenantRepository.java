@@ -1,7 +1,8 @@
 package com.example.docdelivery.repository;
 
-import org.springframework.data.repository.CrudRepository;
+import com.example.docdelivery.entity.Tenant;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface TenantRepository extends CrudRepository {
+public interface TenantRepository extends JpaRepository<Tenant,Integer> {
 
 }
