@@ -25,7 +25,7 @@ public class RentorsController {
             model.addAttribute("ready_rentor_list", readyRentors);
             return "ready_rentors";
         } catch (NoListException e) {
-            return "request_form";          // todo ap create request_form.html
+            return "request_form";          // todo create request_form.html
         }
     }
 
