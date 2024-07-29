@@ -14,8 +14,11 @@ public class Rentor {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "code")
+    @Column(name = "id")
     protected int id;
+
+    @Column
+    private String email;
 
     @Column(name = "name")
     private String name;
