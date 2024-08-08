@@ -1,6 +1,7 @@
 package com.example.docdelivery.entity;
 
 import jakarta.persistence.*;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -31,6 +32,9 @@ public class Rentor {
 
     @ManyToOne
     Tenant tenant;
+
+    @OneToOne
+    ApplicationUser user;
 
     public Rentor() {               /// todo ap remove
         isReady = true;

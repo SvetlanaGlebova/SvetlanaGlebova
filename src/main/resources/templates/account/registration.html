@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Создание аккаунта Арендодателя</title>
+</head>
+<body>
+<h1>Создание аккаунта Арендодателя</h1>
+<span th:if="${error}">Пользователь уже существует</span>
+
+<form method="POST" th:action="@{/account/registration}" th:object="${applicationUser}">
+    <input type="text" placeholder="Введите имя" th:field="*{username}">
+    <input type="password" placeholder="Введите пароль" th:field="*{password}">
+    <input type="submit" value="Создать аккаунт">
+</form>
+
+</body>
+</html>

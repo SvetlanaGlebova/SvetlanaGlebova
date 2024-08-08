@@ -1,5 +1,7 @@
 package com.example.docdelivery.service;
 
+import com.example.docdelivery.entity.ApplicationUser;
+import com.example.docdelivery.repository.ApplicationUserRepository;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.User;
