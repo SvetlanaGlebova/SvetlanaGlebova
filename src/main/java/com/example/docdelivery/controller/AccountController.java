@@ -33,8 +33,8 @@ public class AccountController {
     public String createAccount(ApplicationUser user, Model model) {
         try {
             accountService.registration(user);
-            //rentorService.createRentor(user);
-            return "redirect:/account/login";
+            rentorService.createRentor(user);
+            return "redirect:/login";
         } catch (AccountException e) {
             model.addAttribute("error", e.getMessage());
             return "account/registration";

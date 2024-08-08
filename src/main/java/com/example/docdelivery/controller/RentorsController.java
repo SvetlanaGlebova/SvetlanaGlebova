@@ -1,5 +1,6 @@
 package com.example.docdelivery.controller;
 
+import com.example.docdelivery.entity.ApplicationUser;
 import com.example.docdelivery.entity.Rentor;
 import com.example.docdelivery.exceptions.NoListException;
 import com.example.docdelivery.service.RentorService;
@@ -30,6 +31,7 @@ public class RentorsController {
     public String postReadyForm (Principal principal){
         //добавление Rentor при статусе готов
         System.out.println("Principal: " + principal.getName());
+        rentorService.toggleReady(principal.getName());
         return "redirect:/ready_form";
     }
 

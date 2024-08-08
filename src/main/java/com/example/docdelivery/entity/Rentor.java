@@ -37,6 +37,6 @@ public class Rentor {
     ApplicationUser user;
 
     public Rentor() {               /// todo ap remove
-        isReady = true;
+        isReady = false;
     }
 }
